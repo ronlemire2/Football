@@ -15,20 +15,36 @@ struct ContentView: View {
                 .fontWeight(.regular)
                 .foregroundStyle(.gray)
             HStack {
-                Image(systemName: "figure.american.football")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.blue)
-                Image(systemName: "figure.australian.football")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.indigo)
-                
-                // figure.indoor.soccer not in Xcode 15.2
-                Image(systemName: "soccerball")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.purple)
+                VStack {
+                    Image(systemName: "figure.american.football")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(.blue)
+                    Text("American Football")
+                        .font(.callout)
+                        .multilineTextAlignment(.center)
+                }
+
+                VStack {
+                    Image(systemName: "figure.australian.football")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(.indigo)
+                    Text("Australian Football")
+                        .font(.callout)
+                        .multilineTextAlignment(.center)
+                }
+
+                VStack {
+                    // figure.indoor.soccer not in Xcode 15.2
+                    Image(systemName: "soccerball")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundStyle(.purple)
+                    Text("Soccer")
+                        .font(.callout)
+                }
+
             }
         }
         .padding()
